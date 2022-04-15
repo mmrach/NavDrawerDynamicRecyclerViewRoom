@@ -1,7 +1,5 @@
 package com.amm.navdrawerdynamicrecyclerviewroom.preferencias;
 
-import android.app.Application;
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +15,6 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amm.navdrawerdynamicrecyclerviewroom.Ingrediente;
-import com.amm.navdrawerdynamicrecyclerviewroom.IngredientesViewModel;
-import com.amm.navdrawerdynamicrecyclerviewroom.main.MainActivity;
 
 import navdrawerdynamicrecyclerviewroom.R;
 

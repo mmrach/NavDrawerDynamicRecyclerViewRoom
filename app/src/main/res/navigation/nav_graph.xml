@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/wellcome_dest"
-        android:name="com.amm.navdrawerdynamicrecyclerviewroom.wellcome.WellcomeFragment"
+        android:name="com.amm.navdrawerdynamicrecyclerviewroom.WellcomeFragment"
         android:label="Wellcome"
         tools:layout="@layout/fragment_wellcome">
         <action

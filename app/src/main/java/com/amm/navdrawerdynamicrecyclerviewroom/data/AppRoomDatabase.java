@@ -1,4 +1,4 @@
-package com.amm.navdrawerdynamicrecyclerviewroom;
+package com.amm.navdrawerdynamicrecyclerviewroom.data;
 
 import android.content.Context;
 
@@ -8,24 +8,27 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+import com.amm.navdrawerdynamicrecyclerviewroom.Ingrediente;
+import com.amm.navdrawerdynamicrecyclerviewroom.IngredienteDao;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @Database(entities = {Ingrediente.class}, version = 1, exportSchema = false)
-abstract public class IngredientesRoomDatabase extends RoomDatabase {
+abstract public class AppRoomDatabase extends RoomDatabase {
     public abstract IngredienteDao ingredienteDao();
 
-    private static volatile IngredientesRoomDatabase INSTANCE;
+    private static volatile AppRoomDatabase INSTANCE;
     private static final int NUMBER_OF_THREADS = 1;
     static final ExecutorService databaseWriteExecutor =
             Executors.newFixedThreadPool(NUMBER_OF_THREADS);
 
-    static IngredientesRoomDatabase getDatabase(final Context context) {
+    static AppRoomDatabase getDatabase(final Context context) {
         if (INSTANCE == null) {
-            synchronized (IngredientesRoomDatabase.class) {
+            synchronized (AppRoomDatabase.class) {
                 if (INSTANCE == null) {
                     INSTANCE = Room.databaseBuilder(context.getApplicationContext(),
-                            IngredientesRoomDatabase.class, "ingredientes")
+                            AppRoomDatabase.class, "ingredientes")
                             .addCallback(sRoomDatabaseCallback)
                             .build();
                 }

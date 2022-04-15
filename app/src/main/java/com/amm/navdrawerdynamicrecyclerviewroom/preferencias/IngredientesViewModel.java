@@ -1,19 +1,20 @@
-package com.amm.navdrawerdynamicrecyclerviewroom;
+package com.amm.navdrawerdynamicrecyclerviewroom.preferencias;
 
 import android.app.Application;
 
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 
-import java.io.Closeable;
+import com.amm.navdrawerdynamicrecyclerviewroom.Ingrediente;
+import com.amm.navdrawerdynamicrecyclerviewroom.data.Repository;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class IngredientesViewModel extends AndroidViewModel {
 
-    private IngredientesRepository ingredientesRepository;
+    private Repository repository;
 
     private LiveData<List<Ingrediente>> _theList;
 
@@ -23,13 +24,13 @@ public class IngredientesViewModel extends AndroidViewModel {
 
     public IngredientesViewModel(Application application) {
         super(application);
-        ingredientesRepository = new IngredientesRepository(application);
-        _theList = ingredientesRepository.getAllIngredientes();
+        repository = new Repository(application);
+        _theList = repository.getAllIngredientes();
     }
 
     public void initList(String[] arrayIngredientes) {
-        ingredientesRepository.deleteAll();
-        ingredientesRepository.insertIngredientes(arrayIngredientes);
+        repository.deleteAll();
+        repository.insertIngredientes(arrayIngredientes);
 //        for (int i = 0; i < arrayIngredientes.length; i++) {
 //            ingredientesRepository.insert(new Ingrediente(arrayIngredientes[i]));
 //        }
@@ -45,7 +46,7 @@ public class IngredientesViewModel extends AndroidViewModel {
     public void deleteIngrediente(int position) {
         if (_theList.getValue() != null) {
             List<Ingrediente> ingredienteList = new ArrayList<>(_theList.getValue());
-            ingredientesRepository.delete(ingredienteList.get(position));
+            repository.delete(ingredienteList.get(position));
             //ingredienteList.remove(position);
             //_theList.setValue(ingredienteList);
         }
@@ -53,7 +54,7 @@ public class IngredientesViewModel extends AndroidViewModel {
 
     public void addIngrediente(Ingrediente ingrediente) {
         if (_theList.getValue() != null) {
-            ingredientesRepository.insert(ingrediente);
+            repository.insert(ingrediente);
 //            List<Ingrediente> ingredienteList = new ArrayList<>(_theList.getValue());
 //            ingredienteList.add(ingrediente);
 //            ingredienteList.sort(Ingrediente::compareTo);

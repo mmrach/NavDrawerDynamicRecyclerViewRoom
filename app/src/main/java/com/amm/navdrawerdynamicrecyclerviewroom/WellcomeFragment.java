@@ -1,4 +1,4 @@
-package com.amm.navdrawerdynamicrecyclerviewroom.wellcome;
+package com.amm.navdrawerdynamicrecyclerviewroom;
 
 import android.os.Bundle;
 

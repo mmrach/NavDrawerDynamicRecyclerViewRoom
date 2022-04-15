@@ -13,7 +13,7 @@ import androidx.navigation.ui.NavigationUI;
 import android.os.Bundle;
 import android.view.MenuItem;
 
-import com.amm.navdrawerdynamicrecyclerviewroom.IngredientesViewModel;
+import com.amm.navdrawerdynamicrecyclerviewroom.preferencias.IngredientesViewModel;
 import com.google.android.material.navigation.NavigationView;
 
 import java.util.HashSet;

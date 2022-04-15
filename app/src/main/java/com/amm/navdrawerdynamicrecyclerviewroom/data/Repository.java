@@ -1,18 +1,21 @@
-package com.amm.navdrawerdynamicrecyclerviewroom;
+package com.amm.navdrawerdynamicrecyclerviewroom.data;
 
 import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 
-import java.util.ArrayList;
+import com.amm.navdrawerdynamicrecyclerviewroom.Ingrediente;
+import com.amm.navdrawerdynamicrecyclerviewroom.IngredienteDao;
+import com.amm.navdrawerdynamicrecyclerviewroom.data.AppRoomDatabase;
+
 import java.util.List;
 
-public class IngredientesRepository {
+public class Repository {
     private IngredienteDao ingredienteDao;
     private LiveData<List<Ingrediente>> mIngredientes;
 
-    IngredientesRepository(Application application) {
-        IngredientesRoomDatabase db = IngredientesRoomDatabase.getDatabase(application);
+    public Repository(Application application) {
+        AppRoomDatabase db = AppRoomDatabase.getDatabase(application);
         ingredienteDao= db.ingredienteDao();
         mIngredientes = ingredienteDao.getIngredientes();
     }
@@ -26,7 +29,7 @@ public class IngredientesRepository {
     // You must call this on a non-UI thread or your app will throw an exception. Room ensures
     // that you're not doing any long running operations on the main thread, blocking the UI.
     public void insert(Ingrediente ingrediente) {
-        IngredientesRoomDatabase.databaseWriteExecutor.execute(() -> {
+        AppRoomDatabase.databaseWriteExecutor.execute(() -> {
             ingredienteDao.insert(ingrediente);
         });
     }
@@ -41,7 +44,7 @@ public class IngredientesRepository {
 //            ingredienteDao.insertIngredientes(ingredientesArray);
 //        });
         //Con un único thread en el executor
-        IngredientesRoomDatabase.databaseWriteExecutor.execute(() -> {
+        AppRoomDatabase.databaseWriteExecutor.execute(() -> {
             for (int i = 0; i < ingredientes.length; i++) {
                 ingredienteDao.insert(new Ingrediente(ingredientes[i]));
             }
@@ -49,14 +52,14 @@ public class IngredientesRepository {
     }
 
     public void delete(Ingrediente ingrediente){
-        IngredientesRoomDatabase.databaseWriteExecutor.execute(() -> {
+        AppRoomDatabase.databaseWriteExecutor.execute(() -> {
             ingredienteDao.deleteIngrediente(ingrediente.toString());
             //ingredienteDao.delete(ingrediente);
         });
     }
 
     public void deleteAll(){
-        IngredientesRoomDatabase.databaseWriteExecutor.execute(() -> {
+        AppRoomDatabase.databaseWriteExecutor.execute(() -> {
             ingredienteDao.deleteAll();
         });
     }
