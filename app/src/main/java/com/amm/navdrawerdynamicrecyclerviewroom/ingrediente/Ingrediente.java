@@ -1,4 +1,4 @@
-package com.amm.navdrawerdynamicrecyclerviewroom;
+package com.amm.navdrawerdynamicrecyclerviewroom.ingrediente;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.DiffUtil;

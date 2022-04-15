@@ -19,7 +19,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.amm.navdrawerdynamicrecyclerviewroom.Ingrediente;
+import com.amm.navdrawerdynamicrecyclerviewroom.ingrediente.Ingrediente;
 import com.amm.navdrawerdynamicrecyclerviewroom.main.IngredientesViewModel;
 
 import java.util.List;

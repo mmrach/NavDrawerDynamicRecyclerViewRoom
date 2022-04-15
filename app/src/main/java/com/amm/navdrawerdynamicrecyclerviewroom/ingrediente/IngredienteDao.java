@@ -1,4 +1,4 @@
-package com.amm.navdrawerdynamicrecyclerviewroom;
+package com.amm.navdrawerdynamicrecyclerviewroom.ingrediente;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
@@ -7,7 +7,8 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
-import java.util.ArrayList;
+import com.amm.navdrawerdynamicrecyclerviewroom.ingrediente.Ingrediente;
+
 import java.util.List;
 
 @Dao

@@ -6,7 +6,7 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.amm.navdrawerdynamicrecyclerviewroom.Ingrediente;
+import com.amm.navdrawerdynamicrecyclerviewroom.ingrediente.Ingrediente;
 import com.amm.navdrawerdynamicrecyclerviewroom.data.Repository;
 
 import java.util.ArrayList;

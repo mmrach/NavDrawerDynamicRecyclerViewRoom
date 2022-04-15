@@ -8,8 +8,8 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
-import com.amm.navdrawerdynamicrecyclerviewroom.Ingrediente;
-import com.amm.navdrawerdynamicrecyclerviewroom.IngredienteDao;
+import com.amm.navdrawerdynamicrecyclerviewroom.ingrediente.Ingrediente;
+import com.amm.navdrawerdynamicrecyclerviewroom.ingrediente.IngredienteDao;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;

@@ -4,9 +4,8 @@ import android.app.Application;
 
 import androidx.lifecycle.LiveData;
 
-import com.amm.navdrawerdynamicrecyclerviewroom.Ingrediente;
-import com.amm.navdrawerdynamicrecyclerviewroom.IngredienteDao;
-import com.amm.navdrawerdynamicrecyclerviewroom.data.AppRoomDatabase;
+import com.amm.navdrawerdynamicrecyclerviewroom.ingrediente.Ingrediente;
+import com.amm.navdrawerdynamicrecyclerviewroom.ingrediente.IngredienteDao;
 
 import java.util.List;
 
