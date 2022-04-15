@@ -1,4 +1,4 @@
-package com.amm.navdrawerdynamicrecyclerviewroom.preferencias;
+package com.amm.navdrawerdynamicrecyclerviewroom.main;
 
 import android.app.Application;
 

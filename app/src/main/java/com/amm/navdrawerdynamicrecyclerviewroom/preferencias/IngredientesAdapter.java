@@ -15,6 +15,7 @@ import androidx.recyclerview.widget.ListAdapter;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.amm.navdrawerdynamicrecyclerviewroom.Ingrediente;
+import com.amm.navdrawerdynamicrecyclerviewroom.main.IngredientesViewModel;
 
 import navdrawerdynamicrecyclerviewroom.R;
 

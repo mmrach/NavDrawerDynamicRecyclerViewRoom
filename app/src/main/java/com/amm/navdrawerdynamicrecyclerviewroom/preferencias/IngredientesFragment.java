@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.amm.navdrawerdynamicrecyclerviewroom.Ingrediente;
+import com.amm.navdrawerdynamicrecyclerviewroom.main.IngredientesViewModel;
 
 import java.util.List;
 
