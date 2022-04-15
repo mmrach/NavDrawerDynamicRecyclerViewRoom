@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">NavDrawerDynamicRecyclerViewRoom</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wellcome">Comidas Caseras</string>
+    <string name="guisos">Guisos</string>
+    <string name="fritos">Fritos</string>
+    <string name="pastas">Pastas</string>
+    <string name="postres">Postres</string>
+    <string name="sopas">Sopas</string>
+    <string name="strPreferencias">Preferencias</string>
+
+    <string-array name="ingredientes_array">
+        <item>Azucar</item>
+        <item>Leche</item>
+        <item>Huevos</item>
+        <item>Mantequilla</item>
+        <item>Vainilla</item>
+        <item>Harina</item>
+    </string-array>
+</resources>

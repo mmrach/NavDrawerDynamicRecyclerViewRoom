@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/wellcome_dest">
+
+    <fragment
+        android:id="@+id/wellcome_dest"
+        android:name="com.amm.navdrawerdynamicrecyclerviewroom.wellcome.WellcomeFragment"
+        android:label="Wellcome"
+        tools:layout="@layout/fragment_wellcome">
+        <action
+            android:id="@+id/action_wellcome_dest_to_guisosFragment"
+            app:destination="@id/guisos_dest" />
+        <action
+            android:id="@+id/action_wellcome_dest_to_pastasFragment"
+            app:destination="@id/pastas_dest" />
+        <action
+            android:id="@+id/action_wellcome_dest_to_fritosFragment"
+            app:destination="@id/fritos_dest" />
+        <action
+            android:id="@+id/action_wellcome_dest_to_sopasFragment"
+            app:destination="@id/sopas_dest" />
+        <action
+            android:id="@+id/action_wellcome_dest_to_postresFragment"
+            app:destination="@id/postres_dest" />
+        <action
+            android:id="@+id/preferencias_dest"
+            app:destination="@id/preferencias_dest" />
+    </fragment>
+    <fragment
+        android:id="@+id/guisos_dest"
+        android:name="com.amm.navdrawerdynamicrecyclerviewroom.GuisosFragment"
+        android:label="Guisos"
+        tools:layout="@layout/fragment_guisos" />
+    <fragment
+        android:id="@+id/pastas_dest"
+        android:name="com.amm.navdrawerdynamicrecyclerviewroom.PastasFragment"
+        android:label="Pastas"
+        tools:layout="@layout/fragment_pastas" />
+    <fragment
+        android:id="@+id/fritos_dest"
+        android:name="com.amm.navdrawerdynamicrecyclerviewroom.FritosFragment"
+        android:label="Fritos"
+        tools:layout="@layout/fragment_fritos" />
+    <fragment
+        android:id="@+id/sopas_dest"
+        android:name="com.amm.navdrawerdynamicrecyclerviewroom.SopasFragment"
+        android:label="Sopas"
+        tools:layout="@layout/fragment_sopas" />
+    <fragment
+        android:id="@+id/postres_dest"
+        android:name="com.amm.navdrawerdynamicrecyclerviewroom.PostresFragment"
+        android:label="Postres"
+        tools:layout="@layout/fragment_postres" />
+    <fragment
+        android:id="@+id/preferencias_dest"
+        android:name="com.amm.navdrawerdynamicrecyclerviewroom.preferencias.PreferenciasFragment"
+        android:label="Preferencias"
+        tools:layout="@layout/fragment_preferencias" >
+        <action
+            android:id="@+id/action_preferencias_dest_to_ingredientesFragment"
+            app:destination="@id/ingredientesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ingredientesFragment"
+        android:name="com.amm.navdrawerdynamicrecyclerviewroom.preferencias.IngredientesFragment"
+        android:label="Ingredientes"
+        tools:layout="@layout/fragment_ingredientes">
+    </fragment>
+</navigation>

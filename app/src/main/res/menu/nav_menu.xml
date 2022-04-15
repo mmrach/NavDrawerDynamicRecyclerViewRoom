@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/miComidasCaseras"
+        android:title="Comidas Caseras"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/guisos_dest"
+                android:icon="@mipmap/ic_guisos"
+                android:title="Guisos" />
+            <item
+                android:id="@+id/pastas_dest"
+                android:icon="@mipmap/ic_pasta"
+                android:title="Pastas" />
+            <item
+                android:id="@+id/fritos_dest"
+                android:icon="@mipmap/ic_fritos"
+                android:title="Fritos" />
+            <item
+                android:id="@+id/sopas_dest"
+                android:icon="@mipmap/ic_sopas"
+                android:title="Sopas" />
+            <item
+                android:id="@+id/postres_dest"
+                android:icon="@mipmap/ic_postres"
+                android:title="Postres" />
+        </menu>
+    </item>
+    <item
+        android:id="@+id/miOpciones"
+        android:title="Opciones"
+        app:showAsAction="never">
+        <menu>
+            <item
+                android:id="@+id/preferencias_dest"
+                android:icon="@android:drawable/ic_menu_preferences"
+                android:title="Preferencias" />
+            <item
+                android:id="@+id/mail_dest"
+                android:icon="@android:drawable/ic_dialog_email"
+                android:title="Mail" />
+        </menu>
+    </item>
+</menu>
